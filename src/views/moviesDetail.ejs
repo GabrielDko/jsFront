@@ -11,7 +11,16 @@
     <figure>
         <img src="/img/logo-DH.png" alt="Logo Digital House">
     </figure>
+    <div style="display: flex; align-items: center; gap: 5px;">
+        <label class="switch">
+            <input type="checkbox" switch id="miCheckbox">
+            <span class="slider round"></span>
+        </label>
+        <span>Cambiar modo</span>
+    </div>
     <h1><%= movie.title %> </h1>    
+    <br>
+    
     <br>
     <p>CALIFICACIÓN: <%= movie.rating %> </p>
     <p>PREMIOS: <%= movie.awards %> </p>
@@ -23,6 +32,6 @@
         <a class="botonBorrar" href="/movies/delete/<%= movie.id %>">Borrar</a>
         <a class="botonVolver" href="/movies">Listado de Películas</a>
     </section>
-
+    <script src="/js/movieDetail.js"></script>
 </body>
 </html>

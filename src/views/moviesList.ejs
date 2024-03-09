@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de Películas</title>
     <link rel='stylesheet' href='/css/style.css' />
-    <script src="/js/moviesList.js"></script>
 </head>
 
 <body>
     <figure>
         <img src="/img/logo-DH.png" alt="Logo Digital House">
     </figure>
+    <div style="display: flex; align-items: center; gap: 5px;">
+        <label class="switch">
+            <input type="checkbox" switch id="miCheckbox">
+            <span class="slider round"></span>
+        </label>
+        <span>Cambiar modo</span>
+    </div>
     <h1 class="moviesListTitulo"></h1>
     <br>
     <p>
@@ -29,5 +35,7 @@
         <% } %>
 
     </ul>
+    <script src="/js/moviesList.js"></script>
+    <script src="/js/movieDetail.js"></script>
 </body>
 </html>

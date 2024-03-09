@@ -12,6 +12,13 @@
     <figure>
         <img src="/img/logo-DH.png" alt="Logo Digital House">
       </figure>
+      <div style="display: flex; align-items: center; gap: 5px;">
+        <label class="switch">
+            <input type="checkbox" switch id="miCheckbox">
+            <span class="slider round"></span>
+        </label>
+        <span>Cambiar modo</span>
+    </div>
     <h1>Estas seguro de querer borrar esta película: <%= Movie.title %>???</h1>
     <p>
         <form action="/movies/delete/<%= Movie.id %>?_method=PUT" method="POST">
@@ -22,7 +29,7 @@
 
         </form>
     </p>
-    
+    <script src="/js/movieDetail.js"></script>
 </body>
 
 </html>

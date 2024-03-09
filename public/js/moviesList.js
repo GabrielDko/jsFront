@@ -15,7 +15,22 @@ window.addEventListener('load', function () {
         
         links.forEach(link => {
             link.style.color = 'white';
+
+
+            link.addEventListener('mouseover', (e)=>{
+                link.style.color = 'red'
+
+                
+            })
+
+            link.addEventListener('mouseout', (e)=>{
+                link.style.color = 'white'
+
+                
+            })
         });
+
+        
     }
 
 

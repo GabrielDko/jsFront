@@ -11,8 +11,24 @@
     <figure>
         <img src="/img/logo-DH.png" alt="Logo Digital House">
       </figure>
+      <div style="display: flex; align-items: center; gap: 5px;">
+        <label class="switch">
+            <input type="checkbox" switch id="miCheckbox">
+            <span class="slider round"></span>
+        </label>
+        <span>Cambiar modo</span>
+    </div>
     <h1 class="titulo">Película Editada:  <%= Movie.title %></h1>
     <section class="formulario">
+        <button onclick="mostrarOpciones()">Elegir tema de fondo</button>
+
+        <div id="opciones" style="display: none;">
+          <p>Seleccione un tema de fondo:</p>
+          <button onclick="cambiarFondo('blue')">Azul</button>
+          <button onclick="cambiarFondo('green')">Verde</button>
+          <button onclick="cambiarFondo('red')">Rojo</button>
+          <button onclick="removerFondo()">Remover</button>
+        </div>
         
             <form action="/movies/update/<%= Movie.id %>?_method=PUT" method="POST">
                 <label for="title">Título </label>
@@ -46,7 +62,8 @@
             </form>
         
     </section>
-    <script src="/js/movies"></script>
+    <script src="/js/moviesEdit.js"></script>
+    <script src="/js/movieDetail.js"></script>
 </body>
 
 </html>
